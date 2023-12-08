@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="726.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <children>
+      <AnchorPane layoutY="-1.0" opacity="0.98" prefHeight="759.0" prefWidth="1091.0" style="-fx-background-color: #2b2a4c;">
+         <children>
+            <Text layoutX="47.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Pane layoutY="-8.0" prefHeight="786.0" prefWidth="280.0" style="-fx-background-color: #363062;">
+               <children>
+                  <Button defaultButton="true" layoutX="33.0" layoutY="202.0" mnemonicParsing="false" onAction="#switchToprofile" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #2b2a4c;" text="Profile" textFill="#bfb8b8">
+                     <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="33.0" layoutY="115.0" mnemonicParsing="false" onAction="#switchTomywallet" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #2b2a4c;" text="My Wallet" textFill="#bfb8b8">
+                     <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="34.0" layoutY="655.0" mnemonicParsing="false" onAction="#switchTologout" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #2b2a4c;" text="Logout" textFill="#bfb8b8">
+                     <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button defaultButton="true" layoutX="37.0" layoutY="582.0" mnemonicParsing="false" onAction="#switchTosetting" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: #2b2a4c;" text="Settings" textFill="#bfb8b8">
+                     <font>
+                        <Font name="SansSerif Regular" size="20.0" />
+                     </font>
+                  </Button>
+                  <Text fill="#c1adad" layoutX="68.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Budget Buddy" wrappingWidth="157.083984375">
+                     <font>
+                        <Font name="Cambria" size="25.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="28.0" fitWidth="29.0" layoutX="47.0" layoutY="212.0">
+                     <image>
+                        <Image url="@login_images/profile-image.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="47.0" layoutY="125.0">
+                     <image>
+                        <Image url="@login_images/expenses.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="61.0" layoutY="592.0">
+                     <image>
+                        <Image url="@login_images/settings-image.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="61.0" layoutY="665.0">
+                     <image>
+                        <Image url="@login_images/logout-image.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="33.0" layoutY="33.0">
+                     <image>
+                        <Image url="@login_images/expenses.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363062" height="142.0" layoutX="294.0" layoutY="100.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="239.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363062" height="142.0" layoutX="820.0" layoutY="100.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="239.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#363062" height="142.0" layoutX="559.0" layoutY="100.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="239.0" />
+            <Text fill="#bfb8b8" layoutX="607.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current balance" wrappingWidth="143.69805908203125">
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#bfb8b8" layoutX="343.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Amount">
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#bfb8b8" layoutX="871.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Expenses">
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+            </Text>
+            <BarChart layoutX="356.0" layoutY="329.0" prefHeight="384.0" prefWidth="683.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Text fill="#bfb8b8" layoutX="612.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Latest Expenses" wrappingWidth="212.283935546875">
+               <font>
+                  <Font name="SansSerif Regular" size="25.0" />
+               </font>
+            </Text>
+            <TextField layoutX="834.0" layoutY="23.0" opacity="0.73" prefHeight="48.0" prefWidth="212.0" promptText="                       Search" style="-fx-background-color: #fff;">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </TextField>
+            <Text fill="#c1adad" layoutX="334.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hii User!" wrappingWidth="115.60546875">
+               <font>
+                  <Font name="SansSerif Regular" size="27.0" />
+               </font>
+            </Text>
+            <Text fill="#bfb8b8" layoutX="559.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="179.69805908203125">
+               <font>
+                  <Font name="SansSerif Regular" size="25.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="41.0" fitWidth="48.0" layoutX="498.0" layoutY="11.0">
+               <image>
+                  <Image url="@login_images/home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
