@@ -8,10 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
     <children>
-        <ImageView fitHeight="716.0" fitWidth="1070.0">
+        <ImageView fx:id="databaselink" fitHeight="716.0" fitWidth="1070.0">
             <image>
                 <Image url="@login_images/bg-image.jpg" />
             </image>
@@ -35,11 +36,11 @@
                 <Font name="System Bold" size="30.0" />
             </font>
         </Label>
-        <Button layoutX="759.0" layoutY="525.0" mnemonicParsing="false" onAction="#switchToLoginPage" prefHeight="52.0" prefWidth="150.0" style="-fx-background-radius: 30px; -fx-background-color: blue;" text="LOGIN" textFill="WHITE">
+        <Button layoutX="667.0" layoutY="549.0" mnemonicParsing="false" onAction="#switchToLoginPage" prefHeight="52.0" prefWidth="150.0" style="-fx-background-radius: 30px; -fx-background-color: blue;" text="SIGN UP" textFill="WHITE">
          <font>
             <Font size="27.0" />
          </font></Button>
-        <Label layoutX="596.0" layoutY="147.0" text="User Login">
+        <Label layoutX="596.0" layoutY="147.0" text="User Sign Up">
             <font>
                 <Font name="Arial" size="45.0" />
             </font>
@@ -49,13 +50,18 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField layoutX="712.0" layoutY="289.0" prefHeight="46.0" prefWidth="240.0" promptText="Enter user name" style="-fx-background-radius: 30;" />
-      <TextField layoutX="712.0" layoutY="357.0" prefHeight="46.0" prefWidth="240.0" promptText="Enter Email" style="-fx-background-radius: 30;" />
-      <TextField layoutX="712.0" layoutY="432.0" prefHeight="46.0" prefWidth="240.0" promptText="Enter Password" style="-fx-background-radius: 30;" />
-      <Button defaultButton="true" layoutX="38.0" layoutY="38.0" mnemonicParsing="false" onAction="#switchTologin" opacity="0.8" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: blue; -fx-background-radius: 290;" text="   Back" textFill="#bfb8b8">
+      <TextField id="Username" fx:id="Usernametextfield" layoutX="712.0" layoutY="289.0" prefHeight="46.0" prefWidth="240.0" promptText="Enter user name" style="-fx-background-radius: 30;" />
+      <TextField id="Email" fx:id="Emailtextfield" layoutX="712.0" layoutY="357.0" prefHeight="46.0" prefWidth="240.0" promptText="Enter Email" style="-fx-background-radius: 30;" />
+      <TextField id="Password" fx:id="PasswordTextField" layoutX="712.0" layoutY="432.0" prefHeight="46.0" prefWidth="240.0" promptText="Enter Password" style="-fx-background-radius: 30;" />
+      <Button layoutX="861.0" layoutY="549.0" mnemonicParsing="false" onMouseClicked="#switchTologin" prefHeight="52.0" prefWidth="150.0" style="-fx-background-radius: 30px; -fx-background-color: blue;" text="LOGIN" textFill="WHITE">
          <font>
-            <Font name="SansSerif Regular" size="25.0" />
+            <Font size="27.0" />
          </font>
       </Button>
+      <Text layoutX="675.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Has  Account in Budget Buddy Please Login!" wrappingWidth="304.5367431640625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
     </children>
 </AnchorPane>
